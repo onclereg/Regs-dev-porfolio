@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 import { Button } from '@/components/ui/button';
 
 const About = () => {
