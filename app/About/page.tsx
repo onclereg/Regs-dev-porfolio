@@ -16,12 +16,6 @@ const About = () => {
             Have a business idea ? <br/><br/>Tell me about it.
         </p>
         <div className="flex space-x-6 my-6">
-          {/* <Link href="https://github.com/onclereg" target="_blank" rel="noopener noreferrer">
-            <FaGithub size={30} />
-          </Link>
-          <Link href="https://www.linkedin.com/in/reginald-nwachukwu/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={30} />
-          </Link> */}
           <Link href="mailto:nwachukwureg05@gmail.com">
             <FaEnvelope size={30} />
           </Link>
