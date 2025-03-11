@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 
 const About = () => {
   return (
-    <div className='p-4 max-w-7xl text-xl md:text-2xl mx-auto flex flex-col gap-5 font-serif'>
+    <div className='p-4 max-w-7xl text-base md:text-2xl mx-auto flex flex-col gap-5 font-serif'>
         <h1 className='flex justify-center text-3xl mb-8 '>
           <span className='border-r-2 border-l-2 border-purple-900 p-3 rounded-2xl'>About Me</span></h1>
         <p>

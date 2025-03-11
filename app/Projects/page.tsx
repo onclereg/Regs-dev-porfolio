@@ -24,7 +24,7 @@ const Projects = () => {
                         This is built with Next js, Typescript, Tailwind, shadCN, React-redux Toolkit for state management and node.js.
                     </p>
                     <p className='flex gap-6 items-center py-2'>
-                        <p className='underline'>Visit Website :</p>
+                        <h1 className='underline'>Visit Website :</h1>
                         <Link href="https://pocketlawyers.io" target="_blank" rel="noopener noreferrer">
                             <FaGlobe size={25} />
                         </Link>
@@ -44,6 +44,7 @@ const Projects = () => {
                     This is a digital marketplace that offers a curated selection of home décor products, furniture, and design solutions.<br/>This is built with Next js, Typescript, shadCN, sanity for content management system (CMS) that provides developers with a flexible, real-time, and API-driven approach to managing and delivering content and deployed on vercel.
                     </p>
                     <p className='flex gap-6 items-center py-2'>
+                        <h1 className='underline'>Visit Website :</h1>
                         <Link href="https://myokshopify.vercel.app/" target="_blank" rel="noopener noreferrer">
                             <FaGlobe size={25} />
                         </Link>
@@ -63,6 +64,7 @@ const Projects = () => {
                     Carhub is an Ecommerce page that showcases an attractive, user-friendly interface for browsing and exploring cars online. It offers easy navigation, high-quality images, and intuitive search options, making it simple for users to find their desired vehicles.<br/> This app is built with Next.js, Tailwind CSS, shadCN and hosted on vercel.
                     </p>
                     <p className='flex gap-6 items-center py-2'>
+                        <h1 className='underline'>Visit Website :</h1>
                         <Link href="" target="_blank" rel="noopener noreferrer">
                             <FaGlobe size={25} />
                         </Link>
@@ -83,6 +85,7 @@ const Projects = () => {
                     <br/> this app was built with react, javascript, css, tailwind and deployed on vercel.
                     </p>
                     <p className='flex gap-6 items-center py-2'>
+                        <h1 className='underline'>Visit Website :</h1>
                         <Link href="https://foodapp-phi.vercel.app/" target="_blank" rel="noopener noreferrer">
                             <FaGlobe size={25} />
                         </Link>

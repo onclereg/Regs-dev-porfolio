@@ -27,9 +27,12 @@ const Hero = () => {
           </Link>
         </div>
         <Link href="/Projects">
-          <Button variant="ghost" className="text-xl font-normal font-sans  p-5 uppercase border-r-2 border-b-2 border-purple-900 rounded-2xl">
+          <Button variant="ghost" className="text-xl font-normal font-sans mr-5 p-5 uppercase border-r-2 border-b-2 border-purple-900 rounded-2xl">
             Projects
           </Button>
+        </Link>
+        <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <Button className='bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold'>Download Resume</Button>
         </Link>
       </div>
       <div className=" hidden lg:flex justify-center mx-auto relative max-w-[300px] ">

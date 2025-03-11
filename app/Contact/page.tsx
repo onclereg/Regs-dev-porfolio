@@ -1,8 +1,40 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const Contact = () => {
     
+    const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState<string | null>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const response = await fetch("https://formspree.io/f/xoqogjgy", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setStatus("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      setStatus("Error sending message. Try again.");
+    }
+  };
+
   return (
     <section className="mt-[30px]">
         <h1 className="flex justify-center">
@@ -14,19 +46,32 @@ const Contact = () => {
       {/* Contact Form */}
       <div className="w-full md:w-1/2 p-6 rounded-lg shadow-lg">
       
-        <form action="https://formspree.io/f/xoqogjgy" method="POST" className="flex flex-col space-y-4">
+        <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
           <input 
             type="text" 
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
             placeholder="Your Name" 
             className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
           />
           <input 
-            type="email" 
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange} 
+            required
             placeholder="Your Email" 
             className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
           />
           <textarea 
-            placeholder="Your Message" 
+            name="message"
+            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}              
+            rows={4}
+            required 
             className="p-3 border rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"
           ></textarea>
           <div>
