@@ -45,7 +45,7 @@ const Contact = () => {
        <div className=" flex flex-col md:flex-row items-center justify-center p-10 gap-10"> 
       {/* Contact Form */}
       <div className="w-full md:w-1/2 p-6 rounded-lg shadow-lg">
-      
+        <p className="py-4 text-xl font-bold">{status}</p>
         <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
           <input 
             type="text" 
